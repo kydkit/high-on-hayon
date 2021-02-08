@@ -1,0 +1,439 @@
+/* Kyd Kitchaiya */
+
+/*
+#e4d1c2 cream
+#e22424 red
+#0132cc blue
+rgb(255, 251, 242) eggshell
+#f57953 orange
+#ebeff2 nav bg color
+
+font-family: 'Inconsolata', monospace;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 251, 242);
+    font-family: 'Inconsolata', monospace;
+    color: #0132cc;
+}
+
+p, article {
+    line-height: 1.5;
+}
+
+a:link, a:visited {
+    color: #0132cc;
+    text-decoration: none;
+    opacity: 100%;
+}
+
+a:hover {
+    opacity: 60%;
+}
+
+/* HEADER BEGINS HERE */
+
+nav {
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    background-color: #ebeff2;
+    opacity: 80%;
+}
+
+ul {
+    text-align: right;
+    padding: 20px 20px;
+    width: 100%;
+}
+
+nav li {
+    display: inline;
+    padding-right: 5px;
+}
+
+ul img {
+    width: 30px;
+}
+
+.navLogo {
+    color: #0132cc;
+    font-weight: 700;
+    font-size: 28px;
+    float: left;
+}
+
+/* HERO BEGINS HERE */
+
+.hero {
+    position: relative;
+    text-align: center;
+    height: 100vh;
+    background-image: url("images/hayon_drawing.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.herotext {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.button {
+    background-color: #0132cc;
+    color: white;
+    padding: 5px 20px;
+    margin: 10px 150px;
+    text-align: center;
+    font-size: 12pt;
+}
+
+
+.herotext a:link, .herotext a:visited {
+    color: white;
+}
+
+/* USPs BEGINS HERE. HERO ENDS */
+
+.container-usp {
+    margin: 50px 15px;
+}
+
+.uspBox {
+    text-align: center;
+    padding: 0 30px;
+    padding-bottom: 20px;
+}
+
+.uspBox h2 {
+    line-height: 2;
+}
+
+/* SKILLS BEGINS HERE */
+
+.containerSkills {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    background-color: white;
+    padding: 50px 0;
+}
+
+.containerSkills h2 {
+    font-size: 2rem;
+    color: #e22424;
+    padding-bottom: 50px;
+}
+
+.skillLeftRight {
+    width: 100vw;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15%;
+} 
+
+.skillLeftRight img {
+    /* padding: 20px 20px 0 20px; */
+    width: 250px;
+    /* order: 1; */
+}
+
+.skillText {
+    width: 350px;
+    color: #f57953;
+    padding: 30px 50px 0 50px;
+} 
+
+/* SKILLS END BLOG BEGINS */
+
+.containerBlog {
+    padding: 50px 50px;
+}
+
+.containerBlog header {
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.articleContainer article {
+    padding-bottom: 15px;
+}
+
+.blogLinks, .asideBlog a {
+    font-weight: 700;
+}
+
+.articles img {
+    height: 150px;
+    padding-bottom: 0px;
+}
+
+.articles h3, aside h3 {
+    padding-bottom: 15px;
+}
+
+.articleText {
+    /* display: flex;
+    flex-direction: column; */
+    padding: 20px 0 0 0;
+}
+
+div.articles {
+    padding: 0 0 20px;
+}
+
+aside {
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    padding: 0 5px;
+}
+
+aside li {
+    text-align: left;
+}
+
+aside img {
+    height: 150px;
+    margin-bottom: 25px;
+}
+
+/* BLOG ENDS FOOTER BEGINS */
+
+footer {
+    background-color: #0132cc;
+    padding: 50px 50px 50px;
+    color: white;
+}
+
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 250px;
+}
+
+.contactContainer {
+    width: 100%;
+}
+
+.contactForm  {
+    width: 250px;
+    padding-top: 50px;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 10px;
+    resize: vertical;
+    background-color: rgb(255, 251, 242);
+}
+
+a[href^=tel] {
+    color: white;
+    text-decoration: none;
+}
+
+/* ARROW TEST */
+
+.arrowContainer {
+    width: 150px;
+    display: flex;
+    padding-top: 60px;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+@keyframes bounce { 
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+}
+.arrow {
+    width: 50px;
+    animation: bounce 0.9s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+
+
+
+/* media LANDSCAPE ONLY for small devices */
+@media only screen 
+and (min-device-width: 374.5px) 
+and (max-device-width: 812px) 
+and (orientation: landscape) { 
+
+    nav ul {
+        padding: 12px 30px;
+    }
+
+    /* HERO BEGINS HERE */
+
+    .herotext {
+        top: 60%;
+    }
+}
+
+/* media for ipad/medium devices */
+@media only screen 
+and (min-width: 767.98px) {
+
+    /* HEADER BEGINS */
+    li.navLogo {
+        font-size: 35px;
+    }
+
+    nav ul {
+        padding: 20px 30px;
+    }
+
+    ul img {
+        width: 40px;
+    }
+
+    /* HERO BEGINS HERE */
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    /* usps begin */
+    .uspBox {
+        padding: 0 100px 20px;
+    }
+
+    /* SKILLS BEGINS HERE */
+
+    .containerSkills h2 {
+        font-size: 2.5rem;
+    }
+
+    .skillLeftRight {
+        flex-direction: row;
+        padding: 20px 75px;
+    }
+
+    .skillLeftRight:nth-child(even) img {
+        order: 2;
+    }
+
+    .skillText {
+        padding: 0 20px;
+    } 
+
+    /* SKILLS END BLOG BEGINS */
+    .blogFlex {
+        display: flex;
+    }
+
+    .articles {
+        display: flex;
+        padding: 0 30px 50px 0;
+    }
+
+    .articleText {
+        /* display: flex;
+        flex-direction: column; */
+        padding: 0 20px 0 20px;
+    }
+
+    .articleContainer article {
+        padding-bottom: 50px;
+    }
+
+    aside {
+        height: max-content;
+    }
+
+    /* BLOG ENDS FOOTER BEGINS */
+    .footerContainer {
+        width: 100%;
+        align-items: flex-end;
+    }
+    .contactContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contactForm  {
+        padding-top: 0px;
+    }
+    
+    .arrowContainer {
+        flex-direction: row-reverse;
+    }
+}
+
+/* media LANDSCAPE ONLY for medium */
+@media only screen 
+and (min-device-width: 850px)
+and (orientation: landscape) {
+    /* USPs BEGINS HERE. HERO ENDS */
+
+    .container-usp {
+        display: flex;
+        margin: 50px 40px;
+        padding: 0 20px;
+    }
+
+    .uspBox {
+        text-align: center;
+        padding: 0 30px;
+    } 
+
+    .skillText {
+        width: 550px;
+    }
+}
+
+/* media for laptop or bigger devices */
+@media only screen and (min-width: 1200px) {
+    /* USPs BEGINS */
+    .container-usp {
+        max-width: 1200px;
+        margin: 50px auto;
+    }
+
+    /* SKILLS BEGINS HERE */
+    .skillLeftRight {
+        padding: 20px 5%;
+        max-width: 1000px;
+    }
+
+    .skillText {
+        width: 550px;
+    }
+
+    .containerBlog {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* BLOG BEGINS */
+    aside {
+        width: 50%;
+        padding: 0 20px;
+        margin-left: 50px;
+    }
+
+}
